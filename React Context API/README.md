@@ -41,3 +41,62 @@ import { AuthContext } from '../context/AuthProvider'
 
  const {user, token, saveAuth} = useContext(AuthContext)
 ```
+Now you can pass **`{user, token, saveAuth}`** anywhere in component.
+
+
+## Advance Setup of ContextApi and passing props and setState
+
+**Product Context**/ Product Provider `ProductProvider.js`
+
+createContext
+
+```javascript
+import React, {createContext} from "react";
+
+export const ProductContext = React.createContext()
+```
+
+Wrap **`Children`** with Provider. 
+```javascript
+export function ProductProvider ({children}) {
+    let [name, setName] = React.useState("Shoes")
+    let [price, setPrice] = React.useState("30$");
+
+    return(
+        <ProductContext.Provider value={{name, setName, price, setPrice}}>
+            {children}
+        </ProductContext.Provider>
+    )
+}
+```
+
+
+**`Wrap ProductProvider`** around the desired components. `App.js`
+```javascript
+
+import { ProductProvider } from './context/ProductProvider';
+
+
+<ProductProvider>
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/NewsItems" element={<NewsItems />} />
+        <Route path="/Checkout/:id" element={<Checkout />} />
+    </Routes>
+</ProductProvider>
+```
+
+**useContext** & ProductContext use here in `Home.js`
+```javascript
+import React, { useContext } from 'react'
+import { ProductContext } from '../context/ProductProvider';
+
+  const {name, price} = useContext(ProductContext)
+
+  console.log(name, price)
+```
+
+****
+```javascript
+
+```
