@@ -1,6 +1,29 @@
 
 # React Js 
 
+## React Installation:
+
+![Vite and npx](https://res.cloudinary.com/practicaldev/image/fetch/s--os9DYPO5--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d3hgg1jny2imxei9lsto.jpg)
+
+**NPX**
+```javascript
+npx create-react-app myapp
+```
+
+
+**Vite JS**
+
+[vite Installation](https://vitejs.dev/guide/)
+
+- With NPM:
+```javascript
+npm create vite@latest
+```
+- With YARN:
+```javascript
+yarn create vite
+```
+
 ## Day 1 - React JS Introduction
 
 The React.js framework is an **open-source JavaScript Library** 
