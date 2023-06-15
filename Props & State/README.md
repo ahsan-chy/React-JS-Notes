@@ -54,6 +54,41 @@ In this article, we'll explore 5️⃣ key concepts you need to know about Props
 
 #### Prop Destructuring
 
+
+Passing props using Destructuring
+```javascript
+const [count, setCount] = useState(0)
+const [name, setName] = useState('Abc');
+const [email, setEmail] = useState('Xyz@gmail.com');
+const [phone, setPhone] = useState('030002312312');
+const [company, setCompany] = useState('Enable Hours');
+
+<Child name={name} email={email} phone={phone} company={company}/>
+```
+```diff
+! <Child {...{ name, email, phone, company, dob:"76576" }}/>
+```
+
+```javascript
+const Child = (props) => {
+  const { name, email, phone, company, dob } = props;
+  return (
+    <>
+      <p>Name: <b>{name}</b></p>
+      <p>Email: <b>{email}</b></p>
+      <p>Phone: <b>{phone}</b></p>
+      <p>Company: <b>{company}</b></p>
+      <p>Dob: <b>{dob}</b></p>
+    </>
+  );
+};
+```
+
+Destructure Props
+```javascript
+  const { name, email, phone, company, dob } = props;
+```
+
 ```javascript
 import React from 'react';
 
