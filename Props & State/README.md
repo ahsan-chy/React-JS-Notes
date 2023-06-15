@@ -52,7 +52,7 @@ Props are **read-only**, meaning that a component cannot modify its props direct
 In this article, we'll explore 5️⃣ key concepts you need to know about Props in React to take your component-building skills to the next level.
 
 
-#### Prop Destructuring
+### Prop Destructuring
 
 
 Passing props using Destructuring
@@ -62,9 +62,15 @@ const [name, setName] = useState('Abc');
 const [email, setEmail] = useState('Xyz@gmail.com');
 const [phone, setPhone] = useState('030002312312');
 const [company, setCompany] = useState('Enable Hours');
-
-<Child name={name} email={email} phone={phone} company={company}/>
 ```
+
+.
+
+#### Passing Props Method 1
+```diff
+! <Child name={name} email={email} phone={phone} company={company}/>
+```
+#### Passing Props Method 2
 ```diff
 ! <Child {...{ name, email, phone, company, dob:"76576" }}/>
 ```
@@ -85,14 +91,16 @@ const Child = (props) => {
 ```
 
 Destructure Props
-```javascript
-  const { name, email, phone, company, dob } = props;
+
+#### Access Props
+```diff
+  ! const { name, email, phone, company, dob } = props;
 ```
 
-```javascript
+```diff
 import React from 'react';
 
-function MyComponent({ name, age }) {
+! function MyComponent({ name, age }) {
   // Access name and age directly 
   return (
     <div>
@@ -101,7 +109,6 @@ function MyComponent({ name, age }) {
     </div>
   );
 }
-
 export default MyComponent;
 ```
 In this example, instead of using **`props.name`** and props.age to access the props, we destructure the `name` and `age` directly within the function signature of the **`MyComponent`**. This way, we can use the extracted props directly within the component without the need to reference props explicitly.
