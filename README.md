@@ -484,3 +484,51 @@ Define Click handler.
 ```javascript
 <button onClick={updateInput}>Update Input Box</button>
 ```
+
+
+### Amir Code **createElement** 
+
+React Create Element - React Without JSX
+
+![createElement](https://www.knowledgehut.com/_next/image?url=https%3A%2F%2Fd2o2utebsixu4k.cloudfront.net%2Fmedia%2Fimages%2Faaa8c816-a957-48f2-b704-313df6d63889.png&w=750&q=75)
+
+```diff
+!React.createElement(type,{props},children); 
+```
+
+[Detail Article](https://www.knowledgehut.com/blog/web-development/react-create-element)
+
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Pure React</title>
+  </head>
+  <body id="root"></body>
+  <script>
+    const App = () => {
+      const [time, setTime] = React.useState(new Date().toLocaleTimeString());
+    //   React.useEffect(() => {
+        /*
+         <div> <hq>hello</h1> </div>
+         React.createElement('div', null, React.createElement('h1', null, 'hello') )
+
+        */
+        setInterval(() => {
+          setTime(new Date().toLocaleTimeString());
+        }, 1000);
+    //   }, []);
+      return React.createElement("h1", null, `Hello React! it's ${time}`);
+    };
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(React.createElement(App), root);
+  </script>
+</html>
+```
