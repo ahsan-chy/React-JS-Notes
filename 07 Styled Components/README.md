@@ -102,6 +102,48 @@ render(
 
 
 
+## Styled Component Passing `props`
+
+#### Method 1: 
+```javascript
+const ContentSection = styled.div`
+  border-bottom: ${(noBorder) => (noBorder ? '0' : '1px solid #e6e7e8')};
+`;
+
+<ContentSection noBorder>
+  {/* Content without border */}
+</ContentSection>
+```
+
+#### Method 2
+```javascript
+import styled, { css } from 'styled-components';
+
+const ContentSection = styled.div`
+  ${({ border }) => border
+    ? css`
+        border-bottom: 1px solid #e6e7e8;
+      `
+    : css`
+        border-bottom: 0;
+      `}
+`;
+```
+
+
+#### Method 3
+```javascript
+const CustomTheadComponent = styled.div(({ border }) => ({
+
+borderBottom: border ? '1px solid #e6e7e8' : 'none',
+
+ }));
+```
+
+```javascript
+
+```
+
 #### 
 
 ```javascript
