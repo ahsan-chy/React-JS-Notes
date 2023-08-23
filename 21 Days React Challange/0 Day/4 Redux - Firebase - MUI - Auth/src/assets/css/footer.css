@@ -1,0 +1,9 @@
+
+.footer a{
+    text-decoration: none;
+}
+.footer p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px !important;
+}
