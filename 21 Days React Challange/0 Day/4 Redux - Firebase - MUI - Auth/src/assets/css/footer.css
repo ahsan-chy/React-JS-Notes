@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .footer a{
     text-decoration: none;
@@ -7,3 +8,14 @@
     align-items: center;
     margin-bottom: 7px !important;
 }
+=======
+
+.footer a{
+    text-decoration: none;
+}
+.footer p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px !important;
+}
+>>>>>>> 78ef44e09afa2a867a52a71d0ba124618848776f
