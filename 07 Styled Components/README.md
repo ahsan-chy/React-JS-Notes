@@ -130,6 +130,62 @@ const ContentSection = styled.div`
 `;
 ```
 
+- Style using &
+
+```javascript
+
+const Input = styled.input`
+  width: 100%;
+  height: 40px;
+  padding: 0 15px;
+  padding-left: ${({ hasLeftIcon }) => (hasLeftIcon ? '30px' : '10px')};
+  display: block;
+  border: 1px solid #e6e7e8;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #4e3423;
+
+  &::placeholder {
+    color: #1c1b1f;
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid #b9bec7;
+    box-shadow: 0px 1px 15px rgba(174, 174, 174, 0.25);
+  }
+
+  &:disabled {
+    background: #e6e7e8;
+  }
+
+  ${(props) =>
+    props.error &&
+    css`
+      border: 1px solid #d93d3d;
+    `}
+
+  ${(props) =>
+    props.type === 'number' &&
+    css`
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      &:hover {
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+    `}
+`;
+```
+
 
 #### Method 3
 ```javascript
