@@ -53,9 +53,17 @@ export const SqureIcon = styled.div`
 `;
 ```
 
-- Method 2 for svg
+- Method 2 for SVG - PNG - JPEG
 
 ```javascript
+import MaintenanceIcon from '@/assets/images/empty-maintenance-contacts.svg';  // PNG- SVG - JPEG.....
+
+ <CoverIcon src={icon} alt="" />
+
+
+const CoverIcon = styled.img({
+  //Image properties
+});
 
 ```
 

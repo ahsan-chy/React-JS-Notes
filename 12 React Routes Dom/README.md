@@ -28,6 +28,12 @@ Table of Content
 - **`<ErrorBoundary >`**
 - **`<Suspense>`**
 - Fallback
+- Different Scenarios and How Router Dom help there
+  - Click on specific product and move to that product with id
+  - Breadcrumb with Router
+  - Back to last page navigate(-1)
+  - 
+  
 
 ### Install React Router Dom 6
 
