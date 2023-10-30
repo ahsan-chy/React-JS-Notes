@@ -32,8 +32,7 @@ Table of Content
   - Click on specific product and move to that product with id
   - Breadcrumb with Router
   - Back to last page navigate(-1)
-  - 
-  
+  -
 
 ### Install React Router Dom 6
 
@@ -159,7 +158,9 @@ export default Protected;
 {
   /* //+ Protected Routes */
 }
-<Route element={<Protected isAllowed={!!user && user.role.includes("admin")} />}>  // You can put and allow admin, Manager, Hr, Multiple Roles
+<Route element={<Protected isAllowed={!!user && user.role.includes("admin")} />}>
+  {" "}
+  // You can put and allow admin, Manager, Hr, Multiple Roles
   <Route path="/profile" element={<Profile />} />
 </Route>;
 ```
@@ -207,5 +208,166 @@ Setup the Nested Routes
 #### Components
 
 ```javascript
+
+```
+
+### Hooks
+
+- useLocation()
+- useParams()
+- useNavigate()
+- useNavigation()
+- useParams()
+- useOutlet
+- 
+
+#### useLocation()
+
+useLocation is a hook allows you to access the **current location information** in a React component. The location information includes details about the current URL, such as **`the pathname, search parameters, and hash.`**
+
+```javascript
+import { useLocation } from "react-router-dom";
+
+const location = useLocation();
+
+const currentPath = location.pathname;
+```
+
+or You can destructure and use location
+
+```javascript
+import { useLocation } from "react-router-dom";
+
+const { pathname } = useLocation();
+```
+
+Output variable
+
+```javascript
+{
+    "pathname": "/",
+    "search": "",
+    "hash": "",
+    "state": null,
+    "key": "default"
+}
+```
+
+- Key:
+  It generated unique value on every page
+
+- pathname:
+
+- search:
+  When you pass something in url like this. `http://localhost:5176/?age=1` It will result in search like this
+
+```diff
+! search:"?age=1"
+```
+
+- hash:
+  Represents the URL hash fragment (including the leading # character).
+
+```javascript
+//localhost:5176/#333
+
+http: hash: "#333";
+```
+
+- State
+  If you want to send some/large of data with state then you can send it through state.
+
+```javascript
+import { Link } from "react-router-dom";
+
+<Link
+  to={{
+    pathname: "/destination-route",
+    state: {
+      someData: "Hello from the source route",
+      user: {
+        username: "john_doe",
+        email: "john@example.com",
+      },
+    },
+  }}>
+  Go to Destination Route
+</Link>;
+```
+
+```javascript
+import { useLocation } from "react-router-dom";
+
+function DestinationRoute() {
+  const location = useLocation();
+  const { someData, user } = location.state;
+
+  return (
+    <div>
+      <p>{someData}</p>
+      <p>User Info:</p>
+      <p>Username: {user.username}</p>
+      <p>Email: {user.email}</p>
+    </div>
+  );
+}
+
+export default DestinationRoute;
+```
+
+
+
+**Make Breadcrumb using `useLocation`**
+
+[Making Breadcrumbs (useLocation hook)](https://youtu.be/zy8rqihtvA8?list=TLPQMjMxMDIwMjP3rLXJvzOQjw)
+
+```javascript
+import React from 'react';
+import styled from 'styled-components';
+import { Breadcrumb } from 'antd';
+
+import { useLocation } from 'react-router-dom';
+
+function CustomBreadcrumb() {
+  const location = useLocation();
+  const pathnames = location.pathname.split('/').filter((x) => x);
+
+  return (
+    <StyledBreadcrumb>
+      <BreadcrumbItem>Main Office</BreadcrumbItem>
+      {pathnames.map((name, index) => {
+        const isLast = index === pathnames.length - 1;
+
+        return (
+          <BreadcrumbItem key={name}>
+            {isLast ? (
+              <span>{name.charAt(0).toUpperCase() + name.slice(1)}</span>
+            ) : (
+              <span> {name.charAt(0).toUpperCase() + name.slice(1)} </span>
+            )}
+          </BreadcrumbItem>
+        );
+      })}
+    </StyledBreadcrumb>
+  );
+}
+
+const StyledBreadcrumb = styled(Breadcrumb)`
+  padding: 10px;
+  border-radius: 4px;
+  @media (max-width: 768px) {
+    padding-left: 20px;
+  }
+`;
+
+const BreadcrumbItem = styled(Breadcrumb.Item)`
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.375rem;
+`;
+
+export default CustomBreadcrumb;
 
 ```

@@ -212,3 +212,15 @@ The **`children prop`** will be set to the **`h1`** element, and the **`MyCompon
 ```
 
 The children prop can be used to render any kind of React element, including other components, text, images, and more. It is a powerful tool that can be used to create complex and flexible UIs.
+
+
+
+### Key Prop 
+
+[Real Time Scenario Component rerender](https://youtu.be/U95-MS6tDrw?list=PL6u9nhn6BW5gI41v7Y6lpS7HOdtQzAhws)
+
+
+
+
+
+
