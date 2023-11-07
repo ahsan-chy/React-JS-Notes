@@ -24,6 +24,66 @@ npm create vite@latest
 yarn create vite
 ```
 
+Run React App
+
+```javascript
+npm start
+```
+
+```javascript
+npm run dev
+```
+
+**Change port No** and run at your own selected port 
+
+#### [Vite: How to change the PORT of your Development server](https://bobbyhadz.com/blog/vite-change-development-server-port)
+
+
+```javascript
+"scripts": {
+  "dev": "vite --port 3030",
+},
+```
+
+```javascript
+
+```
+
+
+#### Setup .env
+
+Use following files in your project. 
+- .env
+- .env.example
+- .env.development
+
+Example 
+```javascript
+VITE_MAP_API_KEY=your_api_key
+REACT_APP_APP_ID=1:392369386835:web:bb2b69c82486be6cc69da6
+REACT_APP_MEASUREMENT_ID=G-T6T4J7HSNY
+REACT_APP_TYPESENSE_PORT=443
+REACT_APP_TYPESENSE_PROTOCOL=https
+REACT_APP_HOTJAR_ID=
+REACT_APP_HOTJAR_SNIPPET_VERSION=
+```
+
+Import and Use 
+
+```diff
+  const { isLoaded } = useLoadScript({
+!    id: import.meta.env.VITE_MAP_API_KEY,
+!    googleMapsApiKey: import.meta.env.VITE_MAP_API_KEY,
+  });
+```
+
+
+
+
+
+
+
+
 ## Day 1 - React JS Introduction
 
 The React.js framework is an **open-source JavaScript Library** 
