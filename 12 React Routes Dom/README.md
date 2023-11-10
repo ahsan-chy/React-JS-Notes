@@ -371,3 +371,25 @@ const BreadcrumbItem = styled(Breadcrumb.Item)`
 export default CustomBreadcrumb;
 
 ```
+
+
+#### useNavigate
+
+
+```javascript
+  const navigate = useNavigate();
+
+  const { officeId } = useParams();
+
+  const location = useLocation();
+```
+
+```diff
+const handleAddRecord = () => {
+    if (isMobile) {
+      setIsShowCreateItemPopup(true);
+    } else {
+!      navigate(`/inventory/${officeId}/add`);
+    }
+  };
+```
