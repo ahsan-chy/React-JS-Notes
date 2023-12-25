@@ -9,11 +9,26 @@ Content
 - Use ENV
 - Packages
 - Ignore ENV File
--
+- .env in **Next App**
 -
 -
 
 ## Setup .env in
+
+You have mostly two type of servers 
+
+1. **Development** - local / Staging
+
+
+2. **Production** - Production server / Online Server
+
+You will not allow to public any data like 
+- Database passwords
+- Stripe Secret key
+- 
+
+
+
 
 ### Creat React App
 
@@ -63,6 +78,34 @@ For frontend projects, particularly those built with tools like Create React App
 ### Ignore 
 
 ```
-.env
+.env 
+.env.example
+
+or 
+
+// local env files
+.env.local
+.env*.local
+.env.development.local
+.env.text.local
+.env.production.local
+```
+
+
+### .env in Next App
+
+
+Define Next Env variables
+
+```javascript
+NEXT_PUBLIC_API_URL=https://api.example.com
+NEXT_PUBLIC_API_KEY=your_api_key
+```
+
+Access Next Env variables
+
+```javascript
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 ```
 
