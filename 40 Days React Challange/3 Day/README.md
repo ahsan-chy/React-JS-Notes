@@ -1,5 +1,11 @@
-<<<<<<< HEAD
 # Day 3
-=======
-# Day 3
->>>>>>> 78ef44e09afa2a867a52a71d0ba124618848776f
+
+Table of Projects
+
+- [ ] Delete Data
+- [ ] Delete Data From Local & Global
+- [ ] Delete Data From Database
+- [ ] Pass Specific Data from Table(from Array) to Popup to delete Any item from the table. (Instead of just click and Delete)
+- [ ] 
+
+

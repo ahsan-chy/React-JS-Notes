@@ -1,6 +1,6 @@
 # Day 1 - Core React JS
 
-Table of content
+Table of Topics Learning on Day 1 
 - React Basic & Coure React JS
 - Why we need react js
 - What is React & How React Work
@@ -14,3 +14,6 @@ Table of content
 - **`<React.Fregment>`**
 
 
+#### Day 1 Project 1
+
+**[API Call](./day1-api-call/README.md)**

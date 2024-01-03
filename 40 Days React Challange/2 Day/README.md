@@ -1,6 +1,11 @@
 # Day 2 - React Router
 
-Table of content
+
+#### Day 2 Project 2
+
+**[Search - Live Search](./search-data/README.md)**
+
+Table of Topics
 - Install React Router Dom
 - Initial Setup
 - Protected/Private Routes
