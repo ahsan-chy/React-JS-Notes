@@ -1,42 +1,25 @@
-# Day 2 - React Router
+# Day 2 - Search in React JS
 
-
-#### Day 2 Project 2
-
-**[Search - Live Search](./search-data/README.md)**
-
-Table of Topics
-- Install React Router Dom
-- Initial Setup
-- Protected/Private Routes
-- Error/404 Page
-- Nested Routes
-  - Relative Links
-- Components
-  - Link
-  - NavLink
-  - Index
-  - Outlet
-  - Navigate
-  - replace
-  - Location
-  - Replace
-- Conditional Rendering
-- Hooks
-  - useParam
-  - useMatch
-  - useLocation
-  - useHistory
-  - useRouterMatch
-- Older vs New Router Tags/Components/Hooks
-- **`<ErrorBoundary >`**
-- **`<Suspense>`**
-- Fallback
-- Different Scenarios and How Router Dom help there
-  - Click on specific product and move to that product with id
-  - Breadcrumb with Router
-  - Back to last page navigate(-1)
+- **[Search - Live Search](./search-data/README.md)**
+  - Using UseMemo Apply Search 
+  - Use Memo Filte Data
+- [Advance Search](./advance-search-nested-array/README.md)
+  - Find data from nested of arrays. 
   - 
 
-[Details on 12 - React Router DOM]()
+
+### Basic Search 
+
+```javascript
+
+```
+
+
+
+### Advance Search 
+
+```javascript
+
+```
+
 

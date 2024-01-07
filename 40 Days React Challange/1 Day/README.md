@@ -1,19 +1,12 @@
-# Day 1 - Core React JS
+# Day 1 Project 1
 
-Table of Topics Learning on Day 1 
-- React Basic & Coure React JS
-- Why we need react js
-- What is React & How React Work
-- React Dom - Virtual Dom
-- React Fiber
-- React Reconcilation - **Diffing Algorithm**
-- Can Browser read JSX
-- How to optimize React Performance
-- UniDirectional Flow
-- React **Strict mode**
-- **`<React.Fregment>`**
+Table of Topics 
 
+- **[API Call](./day1-api-call/README.md)**
+- 
+React Challange
 
-#### Day 1 Project 1
-
-**[API Call](./day1-api-call/README.md)**
+- [x] API Call
+- [x] How can we fetch API data without using useEffect hook?
+- [x] Fetch api call on onchange input
+- [x] Live Search

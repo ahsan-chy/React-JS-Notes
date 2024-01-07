@@ -34,23 +34,19 @@ const columns = [
 const Products = (props) => {
   const { usersData, searchValue } = props;
 
-  const filterUserData = (data, searchValue) => {
-    return data.filter(
+  const filteredDAta = useMemo(() => {
+    if (!searchValue) return usersData;
+
+    return usersData?.filter(
       (item) =>
         item.first_name.toLowerCase().includes(searchValue.toLowerCase()) ||
         item.last_name.toLowerCase().includes(searchValue.toLowerCase())
     );
-  };
-
-  // Memoize the filtered data
-  const filteredData = useMemo(
-    () => filterUserData(usersData, searchValue),
-    [usersData, searchValue]
-  );
+  }, [searchValue, usersData]);
 
   return (
     <>
-      <Table columns={columns} dataSource={filteredData} />
+      <Table columns={columns} dataSource={filteredDAta} />
     </>
   );
 };
