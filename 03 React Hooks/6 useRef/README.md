@@ -133,7 +133,17 @@ export default MyComponent;
 
 
 
+
+## While Click on button get the updated value of variable without re-Render the component. 
+
+```javascript
+
+```
+
+
+
 <br/>
+
 
 
 .

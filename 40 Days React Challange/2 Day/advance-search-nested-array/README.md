@@ -5,9 +5,11 @@
 - Ali Search
 - Shazam Search
 
+[Backend Search](#backend-search)
+
 ### Amir Search
 
-> Here in this Search We are using the companyOffices array where I am getting the required data and storing that in a array like this. 
+> Here in this Search We are using the companyOffices array where I am getting the required data and storing that in a array like this.
 
 ```diff
 [
@@ -21,38 +23,38 @@
 
 ```javascript
 const filteredOffices = useMemo(() => {
-    if (!search) return companyOffices;
-    const filteredArray = [];
+  if (!search) return companyOffices;
+  const filteredArray = [];
 
-    companyOffices?.forEach((office) => {
-      if (office.name.toLowerCase().includes(search.toLowerCase())) {
+  companyOffices?.forEach((office) => {
+    if (office.name.toLowerCase().includes(search.toLowerCase())) {
+      filteredArray.push({
+        officeName: office.name,
+      });
+    }
+
+    office?.floors?.forEach((floor) => {
+      if (floor.name.toLowerCase().includes(search.toLowerCase())) {
         filteredArray.push({
           officeName: office.name,
+          floorName: floor.name,
         });
       }
 
-      office?.floors?.forEach((floor) => {
-        if (floor.name.toLowerCase().includes(search.toLowerCase())) {
+      floor?.areas?.forEach((area) => {
+        if (area.name.toLowerCase().includes(search.toLowerCase())) {
           filteredArray.push({
             officeName: office.name,
             floorName: floor.name,
+            areaName: area.name,
           });
         }
-
-        floor?.areas?.forEach((area) => {
-          if (area.name.toLowerCase().includes(search.toLowerCase())) {
-            filteredArray.push({
-              officeName: office.name,
-              floorName: floor.name,
-              areaName: area.name,
-            });
-          }
-        });
       });
     });
+  });
 
-    return filteredArray;
-  }, [companyOffices, search]);
+  return filteredArray;
+}, [companyOffices, search]);
 ```
 
 ### Ali Search
@@ -155,4 +157,35 @@ const filteredOffices = useMemo(() => {
 }, [companyOffices, search]);
 ```
 
+## Backend Search
 
+- Backend Server setup and write frunction to send specific data.
+
+```javascript
+server.get("/users", (req, res) => {
+  const { q } = req.query;
+
+  const keys = ["first_name", "last_name", "email"];
+
+  const search = (data) =>
+    data.filter((item) => keys.some((key) => item[key].toLowerCase().includes(q)));
+
+  res.json(search(usersData).splice(0, 10));
+});
+```
+
+- Fetch Users Data and use It
+
+```javascript
+const [query, setQuery] = useState("");
+const [users, setUsers] = useState([]);
+
+useEffect(() => {
+  const fetchUsers = async () => {
+    const result = await axios.get(`http://localhost:4000/users?q=${query}`);
+    setUsers(result.data);
+  };
+
+  if (query.length >= 0) fetchUsers();
+}, [query]);
+```

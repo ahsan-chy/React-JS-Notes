@@ -57,7 +57,12 @@ function SearchOffices() {
         {/* {console.log("offices", companyOffices)} */}
         {console.log("filteredOffices", filteredOffices)}
         <div>
-          <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} />
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search Office"
+          />
         </div>
 
         <div>
