@@ -1,142 +1,139 @@
 # React Interview Questions
 
+![React Interview Questions](https://github.com/ahsan-chy/ahsan-chy/assets/85479513/b4ae222b-8116-4238-bd73-01a78354df68)
 
-- [ ] How can we fetch API data without using useEffect hook?
-- [ ] What are the security measures which should be considered during development?
-- [ ] Can we return setData inside a component?
-- [ ] Multiple useEffects in a same component?
-- [ ] Higher order components or custom hooks? Which approach will you follow.
-- [ ] Why do we need currying in JS? Explain with example.
-- [ ] Explain Array prototyping, generators.
-- [ ] Explain Middlewares in React which you have used?
-- [ ] Function closures and bind method difference.
-- [ ] Explain service and web workers.
-- [ ] Write a program to fetch real-time data for a cricket/football match.
-- [ ] Stateless components?
-- [ ] How do you fetch multiple APIs in a single time.
-- [ ] Interceptors in axios library?
-- [ ] React suspense?
-- [ ] How will you select between SSR and CSR for your application? What parameters will you consider.
-- [ ] What is A11y issues? How do you handle it?
-- [ ] Box model, CSS animation, SASS variables and mixins in CSS.
-- [ ] How authentication works with JWT?
-- [ ] What is selective hydration?
-- [ ] Crawlers, indexing a page and what are the ways?
-- [ ] Explain redux architecture.
-- [ ] How will you set redirects using axios library.
-- [ ] Different types of object creation.
-- [ ] Explain hoisting, TDZ.
-- [ ] Explain IIFE with example.
-- [ ] What is object literal and JSON object.
-- [ ] First-class functions.
-- [ ] Error pages creation.
-- [ ] Scopes in JS.
-- [ ] Event Loop - Task/MicroTask Queues.
-- [ ] Second Largest number from an array without using Math, sort functions.
-- [ ] Synthetic events.
-- [ ] Cookies, localStorage, and sessionStorage.
-- [ ] How Babel works?
-- [ ] Explain webpack, parcel and some of its features.
-- [ ] Challenges with react js.
-- [ ] Memoization techniques, pure functions and pure components.
-- [ ] HTTP methods...explain.
-- [ ] Call, apply and bind.
-- [ ] Arrow functions, anonymous functions, this keyword.
-- [ ] ES6 features.
-- [ ] Create a triangle using CSS.
-- [ ] Explain rate limiting and write a small code to demonstrate.
-- [ ] ESLint and security plugins used in your project.
-- [ ] CORS, CSP, and XSS explain.
-- [ ] Tree shaking, debouncing, and throttling.
-- [ ] Write a program for form validation without using any library.
-- [ ] Array operations.
-- [ ] Nested array operations, flattening of an array likewise.
-- [ ] Performance optimization techniques explain.
-- [ ] Shallow and deep copy...explain how will you create it.
-- [ ] Various hooks syntax useParam, useReducer, useQuery, useContext, and many more.
+Basic Concepts
 
+### 1. Current version of React - Node - NPM?
 
+### 2. What is React JS & Why we use React?
 
+### 3. DOM - Virtual DOM - Shadow Dom - Reconcilation
 
-## 24 most asked questions from react hooks. Make sure to prepare this.
+### 4. Diffing Algorithm - React Fiber
 
+### 5. SPA(Single Page Application)
 
-1.💡 What are React Hooks, and why are they a game-changer for modern React development?
+### 6. How you set your React Project (Folder Structure, Best Practices)
 
-2.🚀 Explain the primary purpose of the useState hook and provide a practical use case.
+### 7. JSX
 
-3. ⚖️ Compare class components with functional components using Hooks. What are the advantages of the latter?
+### 8. `<React Fregment>`
 
-4.🔄 How does the useEffect hook simplify managing side effects in React applications? Share an example.
+### 9. Strict Mode in React
 
-5.🏎️ What strategies do you use to boost performance by leveraging the useMemo hook effectively?
+### 10. Define Component?
 
-6.🌐 Discuss the useContext hook and its role in simplifying state management. Share a real-world scenario where it's beneficial.
+### 11. Define Prop?
 
-7.🔗 Dive into custom hooks – how do they enhance code reusability and maintainability?
+    - Prop Types
+    - Children Props
+    - Default Props
 
-8.📊 Handling multiple state variables in one component using the useState hook – best practices and tips?
+### 12. What is State?
 
-9.📜 What are the fundamental rules when working with React Hooks, and why should you follow them?
+### 13. Use State is synchronous or asynchronous
 
-10.🔄 Explore the compatibility of hooks in class components. Any use cases where this hybrid approach shines?
+### 14. useState setState types
 
-11.🧩 Delve into the useRef hook – how can it be a powerful tool for managing references in React?
+### 15. Muteable & UnMuteable
 
-12.📁 Share insights on using the useReducer hook to manage complex state in your applications?
+### 16. Hooks? (One liner Answer)
 
-13.⚙️ When and how should you employ the useCallback hook to optimize your React components?
+### 17. Pure Components
 
-14.🧰 Dive deep into the benefits of hooks for code organization and reusability in large-scale applications
+### 18. Higher Order Component(HOC)
 
-15.🎡 Simulating component lifecycle methods in functional components – how do hooks help achieve this
+### 19. Controlled & Uncontrolled Components
 
-16.🧩 Untangle the differences between useCallback and useMemo hooks. When is each one the right choice?
+### 20. Statefull components and Stateless components
 
-17.🎭 Demystify using useState inside useEffect – when does it make sense, and any gotchas to be aware of?
+### 21. Prop Drilling & Prop Uplifting
 
-18.🖥️ Leveraging the useRef hook for DOM manipulation – practical examples and best practices.
+### 22. Can Browser read JSX ? How Browser React JSX code? `Babel`
 
-19.⌛ Handling asynchronous operations in useEffect while avoiding race conditions – share your techniques.
+### 23. Explain Babel
 
-20.🗺️ Navigating through routing and implementing navigation using hooks – what are the key strategies?
+### 24. Explain webpack, parcel and some of its features.
 
-21.🚫 Common pitfalls and mistakes to steer clear of when working with React Hooks.
+### 25. How Rerendering work in React?
 
-22.🌐 The power of the useContext hook in creating global state management and dynamic theming – how does it work?
+### 26. Events in React? How to handle Event in React?
 
-23.🌈 Unravel the magic of useContext for dynamic context and theme changes in React applications
+    - (onChnage, onClick, onHover....)
 
-24.🛤️ Making the most of useHistory hook in React Router – how can it enhance your routing experience?
+### 27. Synthetic events.
 
-Note:- Don't save this for later I know u are not coming back to this post 😧
+### 28. differences between functional & class components?
 
+### 29. Form-Handing & Validation techniques?
 
+### 30. limitations of React?
 
+## Hooks in React:
 
-### If I am taking your React Interview, I’m asking you these 19 questions 100%:
+### 31. Different Hooks name
 
-- [ ] What is React?
-- [ ] limitations of React?
-- [ ] advantages of using React?
-- [ ] Explain Strict Mode in React
-- [ ] Can React Hook replace Redux?
-- [ ] useState() and useEffect() in React?
-- [ ] How to prevent re-renders in React?
-- [ ] Form-Handing & Validation techniques?
-- [ ] What is the application of lazy loading?
-- [ ] What is the benefit of error boundaries?
-- [ ] SSR and its benefits in React applications
-- [ ] different ways to style a React component?
-- [ ] Use cases of useEffect() in different scenarios
-- [ ] differences between functional & class components?
-- [ ] differences b/w useMemo() and useCallback() in React
-- [ ] differences b/w controlled & uncontrolled components?
-- [ ] How to re-render the view when the browser is resized?
-- [ ] asynchronous operations with async/await and Promises?
-- [ ] How to pass data b/w sibling components using React router?
+### 32. Lifecycle Method
 
+### 33. Memoization
 
+### 34. Can we return setData inside a component?
 
+### 35. Multiple useEffects in a same component?
 
+### 36. Custom Hooks
 
+### 37. differences b/w useMemo() and useCallback() in React
+
+### 38. useReducer Hook
+
+## Medium Topics:
+
+### 39. How to prevent re-renders in React?
+
+### 40. How do you fetch multiple APIs in a single time.
+
+### 41. What are the security measures which should be considered during development?
+
+### 42. How to Optimize the performance of React App?
+
+### 43. How page performance increase in React?
+
+    - Performance optimization techniques explain.
+
+### 44. How bundle size decrease in React?
+
+### 45. What is the application of lazy loading?
+
+### 46. Suspense
+
+### 47. What is the benefit of error boundaries?
+
+### 48. CORS - How CORS work? - Should we handle it from frontend?
+
+    - CORS, CSP, and XSS explain.
+
+### 49. Long polling
+
+### 50. State management in React
+
+### 51. Redux and Context API difference
+
+### 52. How **REDUX** work? - Explain redux architecture.
+
+### 53. Persist in Redux
+
+### 54. Protected Routes
+
+### 55. Infinity Scrolling
+
+### 56. Crawlers, indexing a page and what are the ways?
+
+### 57. If I write **await** then how program will execute?
+
+### 58. Asynchronous operations with async/await and Promises?
+
+### 59. How to pass data b/w sibling components using React router?
+
+### 60. How authentication works with JWT?
