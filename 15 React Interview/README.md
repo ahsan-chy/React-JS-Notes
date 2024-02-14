@@ -7,7 +7,7 @@ Basic Concepts
 ### 1. Current version of React - Node - NPM?
 
 - React 18
-- Node 21
+- Node 20
 - NPM 10.4.0
 
 ### 2. What is React JS & Why we use React?
@@ -62,9 +62,17 @@ A virtual DOM is a lightweight JavaScript object which is the copy of the real D
 
 ### 8. `<React Fregment>`
 
+-
+
 ### 9. Strict Mode in React
 
+-
+
 ### 10. Define Component?
+
+- Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Function components,
+
+### what is element in react js
 
 ### 11. Define Prop?
 
@@ -74,11 +82,36 @@ A virtual DOM is a lightweight JavaScript object which is the copy of the real D
 
 ### 12. What is State?
 
+- State is a built-in React object that is used to contain data or information about the component.
+
 ### 13. Use State is synchronous or asynchronous
+
+- Asyncronous
+
+```javascript
+const [count, setCount] = useState(0);
+
+setCount(count + 20);
+setCount((count) => count + 20);
+
+console.log(count);
+```
 
 ### 14. useState setState types
 
-### 15. Muteable & UnMuteable
+```javascript
+const [count, setCount] = useState(0);
+```
+
+- Two types
+  1. constant
+  2. function
+
+### 15. Muteable & ImMuteable
+
+- **Muteable** Mutable objects are those whose state can be changed after creation.
+
+- **ImMuteable** Immutable objects are those whose state cannot be changed after creation.
 
 ### 16. Hooks? (One liner Answer)
 
@@ -261,6 +294,9 @@ export default MyComponent;
 
 ### 37. differences b/w useMemo() and useCallback() in React
 
+- useCallback actually save the function
+- useMemo store the result
+
 ### 38. useReducer Hook
 
 ## Medium Topics:
@@ -289,7 +325,7 @@ Performance optimization techniques explain.
 ### 44. How Reduce Bundle Size in React?
 
 1. Code Splitting:
-2. Tree Shaking
+2. Tree Shaking - (Shadcn)
 3. Optimize Dependencies:
 4. Bundle Analysis:
 5. Dynamic Imports:
@@ -323,6 +359,9 @@ Performance optimization techniques explain.
 
 #### Can we create two stores in React Redux
 
+- User / Customer
+- Admin
+
 #### What is purpose of provider in Redux/Context api
 
 ### 52. How **REDUX** work? - Explain redux architecture.
@@ -333,12 +372,83 @@ Performance optimization techniques explain.
 
 ### 55. Infinity Scrolling
 
+- Intersection observer
+- Pagination
+
 ### 56. Crawlers, indexing a page and what are the ways?
 
 ### 57. If I write **await** then how program will execute?
+
+- When i put await in any function. This specific part become synchronous.
+-
 
 ### 58. Asynchronous operations with async/await and Promises?
 
 ### 59. How to pass data b/w sibling components using React router?
 
+- useParam
+- useLocation
+
+To pass data between sibling components using React Router, you can use one of the following methods:
+
+1. **URL Parameters**: You can pass data through the URL as parameters and access them in the sibling components using the `useParams` hook from `react-router-dom`.
+
+    Example:
+    ```jsx
+    // Component 1
+    import { Link } from 'react-router-dom';
+
+    const Component1 = () => {
+      return (
+        <Link to="/component2?data=hello">Go to Component 2</Link>
+      );
+    };
+
+    // Component 2
+    import { useParams } from 'react-router-dom';
+
+    const Component2 = () => {
+      const { data } = useParams();
+      return <div>{data}</div>;
+    };
+    ```
+
+2. **Location State**: You can pass data through the location state when navigating between routes and access it in the sibling components.
+
+    Example:
+    ```jsx
+    // Component 1
+    import { Link } from 'react-router-dom';
+
+    const Component1 = () => {
+      return (
+        <Link
+          to={{
+            pathname: '/component2',
+            state: { data: 'hello' }
+          }}
+        >
+          Go to Component 2
+        </Link>
+      );
+    };
+
+    // Component 2
+    import { useLocation } from 'react-router-dom';
+
+    const Component2 = () => {
+      const { state } = useLocation();
+      return <div>{state.data}</div>;
+    };
+    ```
+
+Choose the method that best fits your use case and application structure. Both methods allow passing data between sibling components efficiently using React Router.
+
 ### 60. How authentication works with JWT?
+
+### 61. Interceptors in Axios
+
+- Jab bhe request ay gi ya jay gi to ya, interceptor say guzar kr process ho gi. It is like middleware.
+
+- Interceptors allow you to modify the request or response before it is sent or received by the server.
+- Interceptors are useful because they allow developers to add custom functionality to requests and responses without modifying the actual code that makes the request.
