@@ -4,3 +4,5 @@
 - `<Suspance>`
 - `<ErrorBoundary>`
 -  lazy
+- Debouncing & Throttling
+- 
